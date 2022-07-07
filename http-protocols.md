@@ -26,6 +26,21 @@ Similar ao PUT, o método PATCH tem como função alterar informações existent
 
 O método DELETE é utilizado quando é necessário deletar um recurso. Pode ser usado para remover um usuário de um banco de dados, uma postagem de rede social, etc.
 
+### HEAD
+
+O HEAD é similar ao GET, com a diferença de que o método HEAD apenas solicita os headers, sem o body.
+
+### TRACE
+
+O método TRACE serve para retornar o input realizado para o usuário, o que o torna útil para debugging.
+
+### OPTIONS
+
+O método OPTIONS solicita as opções de comunicação permitidas em um determinado servidor ou URL.
+
+### CONNECT
+
+O método CONNECT serve para iniciar uma comunicação de duas vias através de um servidor proxy.
 
 ## Response Codes
 
