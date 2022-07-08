@@ -42,6 +42,40 @@ O método OPTIONS solicita as opções de comunicação permitidas em um determi
 
 O método CONNECT serve para iniciar uma comunicação de duas vias através de um servidor proxy.
 
+## HTTP headers
+
+Os headers permitem que a comunicação entre o cliente e o servidor possa passar informações adicionais, tanto no request quanto na response.
+
+#### Authorization
+
+O request header *authorization* traz as credenciais necessárias para autenticar o acesso do usuário ao servidor, garantindo acesso a um recurso protegido.
+
+#### Content-Type
+
+Em um request, o header *content-type* indica o tipo do conteúdo da recurso, antes dele sofrer alguma mudança (criptografia, por exemplo).
+
+Quando utilizado em uma response, traz ao cliente o conteúdo real do conteúdo retornado.
+
+```
+content-type: application/javascript; charset=utf-8
+```
+
+### Cookie
+
+Contém os cookies armazenados que são associados ao servidor.
+
+```
+Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+```
+
+#### Host
+
+Serve para especificar o host e o número da porta do servidor para onde foi feita a requisição. Caso não seja especificada, é implicitamente a porta padrão (443 para HTTPS e 80 para HTTP).
+
+#### Referer
+
+O header *referer* contém o endereço parcial ou absoluto da página que fez a requisição. Ele é utilizado para indicar a página de onde os usuários estão visitando.
+
 ## Response Codes
 
 Ainda para que exista uma padronização entre diferentes desenvolvedores, foram criados os response codes. Eles servem para representar o que aconteceu: se a requisição retornou algum conteúdo, se houve algum problema interno, se houve algum problema na soliitação, etc.
